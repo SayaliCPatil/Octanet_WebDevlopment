@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(https://4kwallpapers.com/images/walls/thumbs_3t/12755.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    cursor: url('pen1.png'), auto; /* Adjust this URL to your actual cursor image */
+}
+header {
+    width: 100%;
+    position: relative;
+    top: 0;
+    z-index: 1;
+    background: transparent;
+}
+header.container {
+    height: 10vh;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+.logo {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.logo img {
+    height: 40px;
+    width: 40px;
+}
+.logo p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: 500;
+    cursor: default;
+}
+a {
+    text-decoration: none;
+    color: antiquewhite;
+}
+ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+li {
+    font-size: 20px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: aliceblue;
+    padding: 15px;
+}
+.main {
+    width: 100%;
+    height: 90vh;
+    position: absolute;    
+}
+.content {
+    color: aliceblue;
+    top: 0;
+    left: 10px;
+}
+.content .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    top: 100px;
+    width: 100%;
+}
+.ToDo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    width: 100%;
+    max-width: 500px;
+}
+.ToDo_value {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: aliceblue;
+    flex-grow: 1;
+    border-bottom: 2px solid rgb(137, 135, 135);
+    
+}
+/* .ToDo_checkbox {
+    
+} */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: inherit;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.ToDo:has(.ToDo_checkbox:checked) {
+    color: aquamarine;
+    background: rgba(0, 0, 0, 0.137);
+    text-decoration: line-through 1.5px;
+}
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    align-self: center; /* Align button to the left */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+button:active {
+    background-color: #004494;
+    transform: translateY(0); /* Reset lift on click */
+}

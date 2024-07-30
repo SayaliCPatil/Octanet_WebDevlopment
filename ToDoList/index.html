@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="iconToDo.png" alt="ToDoList">
+                <p>ToDo List</p>            
+            </div>
+            <ul>
+                <a href="ToDo.html"><li>Home</li></a>
+                <a href="main"><li>Contacts</li></a>
+                <a href="main"><li>Sign in</li></a>
+            </ul>
+        </nav>
+    </header>
+    <div class="main">
+        <div class="content">
+            <div class="container">
+                <div id="inputContainer">
+                    <div class="ToDo">
+                        <input class="ToDo_value" type="text" placeholder="(empty)">
+                        <input class="ToDo_checkbox" type="checkbox" aria-label="Task Completed">                    
+                    </div>
+                </div>
+                <button id="addTaskBtn">Add More</button>
+                <button id="refreshBtn">Refresh Page</button>
+            </div>
+        </div>         
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const addTaskBtn = document.getElementById('addTaskBtn');
+            addTaskBtn.addEventListener('click', function() {
+                const inputContainer = document.getElementById('inputContainer');
+                const newToDo = document.createElement('div');
+                newToDo.classList.add('ToDo');
+                newToDo.innerHTML = `
+                    <input class="ToDo_value" type="text" placeholder="(empty)">
+                    <input class="ToDo_checkbox" type="checkbox" aria-label="Task Completed">
+                `;
+                inputContainer.appendChild(newToDo);
+            });
+
+            const refreshBtn = document.getElementById('refreshBtn');
+            refreshBtn.addEventListener('click', function() {
+                window.location.reload();
+            });
+        });
+    </script>
+</body>
+</html>
